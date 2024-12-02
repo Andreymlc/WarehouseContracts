@@ -1,18 +1,13 @@
 package com.example.WarehouseContracts.dto.forms.product;
 
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 
-import java.math.BigDecimal;
-
-public record ProductCreateForm(
-    String name,
+public record ProductDeleteForm(
     PagesForm pages,
-    String category,
-    BigDecimal price,
     BaseAdminForm base
 ) {
-    public ProductCreateForm {
+    public ProductDeleteForm {
         pages = pages == null ? new PagesForm(null, null, null) : pages;
     }
 }

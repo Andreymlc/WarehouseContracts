@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.example.WarehouseContracts.dto.forms.WarehousesSearchForm;
+import com.example.WarehouseContracts.dto.forms.warehouse.WarehousesSearchForm;
 import com.example.WarehouseContracts.dto.forms.category.CategorySearchForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductsUserSearchForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductsAdminSearchForm;

@@ -5,6 +5,5 @@ import java.math.BigDecimal;
 public record ProductAddDto(
     String name,
     String category,
-    BigDecimal price,
-    BigDecimal oldPrice
+    BigDecimal price
 ) {}

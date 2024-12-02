@@ -1,7 +1,6 @@
 package com.example.WarehouseContracts.dto;
 
-public record CategoryDto (
-    String id,
+public record CategoryAddDto(
     String name,
     Integer discount
 ) {}

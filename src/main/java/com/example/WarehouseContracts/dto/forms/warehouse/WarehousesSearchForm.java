@@ -1,4 +1,4 @@
-package com.example.WarehouseContracts.dto.forms;
+package com.example.WarehouseContracts.dto.forms.warehouse;
 
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
 import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;

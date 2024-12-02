@@ -3,13 +3,15 @@ package com.example.WarehouseContracts.dto.forms.product;
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
 import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 
-public record MoveProductForm(
+public record ProductMoveForm(
     PagesForm pages,
+    String productId,
+    Integer countItems,
     BaseAdminForm base,
-    String productName,
-    String newWarehouse
+    String warehouseId,
+    String newWarehouseId
 ) {
-    public MoveProductForm {
+    public ProductMoveForm {
         pages = pages == null ? new PagesForm(null, null, null) : pages;
     }
 }
