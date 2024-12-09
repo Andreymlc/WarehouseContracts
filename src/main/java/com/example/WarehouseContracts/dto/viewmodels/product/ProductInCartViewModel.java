@@ -1,12 +1,9 @@
 package com.example.WarehouseContracts.dto.viewmodels.product;
 
-import java.math.BigDecimal;
-
-public record ProductViewModel (
+public record ProductInCartViewModel(
     String id,
     String name,
-    Float price,
-    Float oldPrice,
     String category,
-    Integer quantity
+    Integer quantity,
+    Float totalPrice
 ) {}

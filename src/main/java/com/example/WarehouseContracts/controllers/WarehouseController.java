@@ -1,12 +1,13 @@
 package com.example.WarehouseContracts.controllers;
 
+import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import com.example.WarehouseContracts.dto.forms.product.ProductMoveForm;
 import com.example.WarehouseContracts.dto.forms.warehouse.WarehouseDeleteForm;
-import com.example.WarehouseContracts.dto.viewmodels.product.ProductSetMinimumForm;
+import com.example.WarehouseContracts.dto.forms.product.ProductSetMinMaxForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductWarehouseSearchForm;
 
 @RequestMapping("/warehouses")
@@ -28,14 +29,21 @@ public interface WarehouseController extends BaseController {
     @PostMapping("/{warehouseId}/set-minimum")
     String setMinimum(
         @PathVariable("warehouseId") String warehouseId,
-        @Valid @ModelAttribute("editForm") ProductSetMinimumForm editForm,
+        @Valid @ModelAttribute("editForm") ProductSetMinMaxForm editForm,
+        BindingResult bindingResult,
+        Model model);
+
+    @PostMapping("/{warehouseId}/set-maximum")
+    String setMaximum(
+        @PathVariable("warehouseId") String warehouseId,
+        @Valid @ModelAttribute("maximum") ProductSetMinMaxForm editForm,
         BindingResult bindingResult,
         Model model);
 
     @GetMapping("/{warehouseId}/delete")
     String delete(
         @PathVariable("warehouseId") String warehouseId,
-        @Valid @ModelAttribute("form") WarehouseDeleteForm form,
+        @Valid @ModelAttribute("form") BaseAdminForm form,
         BindingResult bindingResult);
 
 }

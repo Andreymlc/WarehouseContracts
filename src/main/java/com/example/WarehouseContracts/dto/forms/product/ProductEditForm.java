@@ -2,11 +2,10 @@ package com.example.WarehouseContracts.dto.forms.product;
 
 import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 
-import java.math.BigDecimal;
-
-public record ProductCreateForm(
+public record ProductEditForm(
+    String id,
     String name,
-    Float price,
+    float price,
     String category,
     BaseAdminForm base
 ) {}

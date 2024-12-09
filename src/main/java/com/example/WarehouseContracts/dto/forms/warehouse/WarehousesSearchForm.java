@@ -4,8 +4,8 @@ import com.example.WarehouseContracts.dto.forms.base.PagesForm;
 import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
 
 public record WarehousesSearchForm (
-        BaseAdminForm base,
-        PagesForm pages
+        PagesForm pages,
+        BaseAdminForm base
 ) {
     public WarehousesSearchForm {
         pages = pages == null ? new PagesForm(null, null, null) : pages;
