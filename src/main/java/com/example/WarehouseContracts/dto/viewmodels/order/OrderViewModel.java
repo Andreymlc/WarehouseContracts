@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 public record OrderViewModel(
     String number,
-    String status,
-    LocalDateTime date,
-    Float totalPrice
+    Float totalPrice,
+    LocalDateTime date
 ) {}

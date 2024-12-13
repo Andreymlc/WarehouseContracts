@@ -1,16 +1,13 @@
 package com.example.WarehouseContracts.dto.forms.order;
 
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 
 public record OrdersSearchForm(
-    String status,
-    PagesForm pages,
-    boolean dateSort,
-    BaseAdminForm base
+    BaseForm base,
+    PagesForm pages
 ) {
     public OrdersSearchForm {
-        status = status == null || status.isBlank() ? "" : status;
         pages = pages == null ? new PagesForm(null, null, null) : pages;
     }
 }

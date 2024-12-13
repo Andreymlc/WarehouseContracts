@@ -1,13 +1,13 @@
 package com.example.WarehouseContracts.dto.forms.base;
 
-public record PagesForm (
+public record PagesForm(
     Integer page,
     Integer size,
     String substring
 ) {
     public PagesForm {
-         page = page != null ? page : 1;
-         size = size != null ? size : 10;
-         substring = substring == null || substring.isBlank() ? "" : substring;
+        page = page != null ? page : 1;
+        size = size != null ? size : 12;
+        substring = substring == null || substring.isBlank() ? "" : substring;
     }
 }

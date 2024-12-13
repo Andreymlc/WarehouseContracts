@@ -1,9 +1,9 @@
 package com.example.WarehouseContracts.dto.forms.warehouse;
 
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 
 public record WarehouseCreateForm(
     String name,
     String location,
-    BaseAdminForm base
+    BaseForm base
 ) {}

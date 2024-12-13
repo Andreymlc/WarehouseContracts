@@ -1,7 +1,7 @@
 package com.example.WarehouseContracts.dto.forms.product;
 
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 import jakarta.validation.constraints.Min;
 
 public record ProductSetMinMaxForm(
@@ -10,7 +10,7 @@ public record ProductSetMinMaxForm(
     PagesForm pages,
     String productId,
     String warehouseId,
-    BaseAdminForm base
+    BaseForm base
 ) {
     public ProductSetMinMaxForm {
             pages = pages == null ? new PagesForm(null, null, null) : pages;

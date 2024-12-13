@@ -1,12 +1,12 @@
 package com.example.WarehouseContracts.dto.forms.product;
 
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 import com.example.WarehouseContracts.dto.forms.base.PagesForm;
-import com.example.WarehouseContracts.dto.forms.base.BaseUserForm;
 
 public record ProductsUserSearchForm(
     String category,
     PagesForm pages,
-    BaseUserForm base,
+    BaseForm base,
     boolean priceSort
 ) {
     public ProductsUserSearchForm {

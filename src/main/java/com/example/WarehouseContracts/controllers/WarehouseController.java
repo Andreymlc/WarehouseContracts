@@ -1,12 +1,11 @@
 package com.example.WarehouseContracts.controllers;
 
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import com.example.WarehouseContracts.dto.forms.product.ProductMoveForm;
-import com.example.WarehouseContracts.dto.forms.warehouse.WarehouseDeleteForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductSetMinMaxForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductWarehouseSearchForm;
 
@@ -43,7 +42,7 @@ public interface WarehouseController extends BaseController {
     @GetMapping("/{warehouseId}/delete")
     String delete(
         @PathVariable("warehouseId") String warehouseId,
-        @Valid @ModelAttribute("form") BaseAdminForm form,
+        @Valid @ModelAttribute("form") BaseForm form,
         BindingResult bindingResult);
 
 }

@@ -5,11 +5,10 @@ import jakarta.validation.Valid;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
-import com.example.WarehouseContracts.dto.forms.base.BaseAdminForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 import com.example.WarehouseContracts.dto.forms.category.CategoryEditForm;
 import com.example.WarehouseContracts.dto.forms.product.ProductCreateForm;
 import com.example.WarehouseContracts.dto.forms.category.CategoryCreateForm;
-import com.example.WarehouseContracts.dto.forms.category.CategorySetDiscountForm;
 
 @RequestMapping("/catalog")
 public interface CatalogController extends BaseController {
@@ -23,7 +22,7 @@ public interface CatalogController extends BaseController {
     @GetMapping("/products/{productId}/delete")
     String deleteProduct(
         @PathVariable("productId") String productId,
-        @Valid @ModelAttribute("form") BaseAdminForm form,
+        @Valid @ModelAttribute("form") BaseForm form,
         BindingResult bindingResult);
 
     @GetMapping("/products/{productId}/edit")
@@ -47,7 +46,7 @@ public interface CatalogController extends BaseController {
     @GetMapping("/categories/{categoryId}/delete")
     String deleteCategory(
         @PathVariable("categoryId") String categoryId,
-        @Valid @ModelAttribute("form") BaseAdminForm form,
+        @Valid @ModelAttribute("form") BaseForm form,
         BindingResult bindingResult);
 
     @GetMapping("/categories/{categoryId}/edit")

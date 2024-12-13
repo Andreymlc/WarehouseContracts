@@ -1,8 +1,8 @@
 package com.example.WarehouseContracts.dto.forms.cart;
 
-import com.example.WarehouseContracts.dto.forms.base.BaseUserForm;
+import com.example.WarehouseContracts.dto.forms.base.BaseForm;
 
 public record AddProductToUserCartForm(
     String productId,
-    BaseUserForm base
+    BaseForm base
 ) {}
